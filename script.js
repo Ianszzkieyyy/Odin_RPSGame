@@ -1,48 +1,72 @@
 'use strict';
 
+// Used to keep track of game score
+let userWin = 0;    
+let compWin = 0;
 
-let userSelection = prompt("Rock, Paper, Scissors! Who You Got?");
-userSelection = userSelection.toUpperCase(); // We use this to make user selection case insensitive
-
-// Randomly pick between rock paper or scissors
-
-const computerSelect = function() {
-    const choices = ["ROCK", "PAPER", "SCISSORS"];
-    const randChoice = Math.floor(Math.random() * 3);
-    return choices[randChoice];
+// Ask the user for the player of his/her choosing (wrong input will get error)
+const userSelection = function() {
+    const userPlayer = prompt("Rock, Paper, Scissors! Who You Got?");
+    return userPlayer.toUpperCase();
 }
 
-const computerSelection = computerSelect();
+// computer will select randomly between the three 
+const computerSelection = function() {
+    const choices = ["ROCK", "PAPER", "SCISSORS"];
+    const randChoice = Math.floor(Math.random() * 3); // Math.random chooses a number from 0 to 1. times that to 3 to make it
+    return choices[randChoice];                       // 0 to 2 (+1 would make it 1 to 3) and floor will round the number off                                                      // 
+}                                                     // and use that number to get element in the array.     
+
 
 // check every scenario possible in rock paper scissor game
+const playround = function() {
+    let userPlayer = userSelection();
+    let computerPlayer = computerSelection();
 
-const playround = function(userSelection, computerSelection) {
-    if (userSelection == computerSelection) {
-        console.log("Uh oh! Looks like we have a tie!");
+    if (userPlayer == computerPlayer) {
+        return "Uh oh! Looks like you choose both!";
     }
-    else if (userSelection == "ROCK" && computerSelection == "PAPER") {
-        console.log("You Lose! Paper beats Rock!");
+    else if (userPlayer == "ROCK" && computerPlayer == "PAPER") {
+        compWin++;
+        return "You Lose! Paper beats Rock!";
     }
-    else if (userSelection == "PAPER" && computerSelection == "SCISSORS") {
-        console.log("You Lose! Scissors beats Paper!");
+    else if (userPlayer == "PAPER" && computerPlayer == "SCISSORS") {
+        compWin++;
+        return "You Lose! Scissors beats Paper!";
     }
-    else if (userSelection == "SCISSORS" && computerSelection == "ROCK") {
-        console.log("You Lose! Rock beats Scissors!");
+    else if (userPlayer == "SCISSORS" && computerPlayer == "ROCK") {
+        compWin++;
+        return "You Lose! Rock beats Scissors!";
     }
-    else if (userSelection == "ROCK" && computerSelection == "SCISSORS") {
-        console.log("You Win! Rock beats Scissors!");
+    else if (userPlayer == "ROCK" && computerPlayer == "SCISSORS") {
+        userWin++;
+        return "You Win! Rock beats Scissors!";
     }
-    else if (userSelection == "PAPER" && computerSelection == "ROCK") {
-        console.log("You Win! Paper beats Rock!");
+    else if (userPlayer == "PAPER" && computerPlayer == "ROCK") {
+        userWin++;
+        return "You Win! Paper beats Rock!";
     }
-    else if (userSelection == "SCISSORS" && computerSelection == "PAPER") {
-        console.log("You Win! Scissors beats Paper!");
+    else if (userPlayer == "SCISSORS" && computerPlayer == "PAPER") {
+        userWin++;
+        return "You Win! Scissors beats Paper!";
     }
     else {
-        console.log("You may have inputted something wrong?")
+        return "You may have inputted something wrong?";
     }
 }
 
-playround(userSelection, computerSelection);
+// make the game a best of 5 by tracking the score
+const game = function() {
+    while(userWin < 5 && compWin < 5) {
+        console.log(userWin, compWin);
+        console.log(playround());
+    }
+
+    if (userWin > compWin) console.log("You beat that A.I in a best of five. Well done!");
+    else if (compWin > userWin) console.log("The A.I got the best of ya. Well it looks like they taking over.");
+}
+
+game();
+
 
 
