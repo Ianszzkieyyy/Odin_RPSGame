@@ -1,1 +1,3 @@
 # Odin_RPSGame
+
+01/13/22 - Started this Javascript Rock Paper Scissor project. I am really surprised that I was able to get the basic functionality of the game in only an hour. The game is totally playable now, my only problem to tackle left is how to track the score of the user and the computer, and make it play and play until someone reaches 5 points, which I guess will have to do with loops. So I am going to tackle that problem sometime around later or tommorow. Anyways, still happy with the progress I made now :)
