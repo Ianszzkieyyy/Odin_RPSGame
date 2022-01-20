@@ -6,8 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <script src="script.js"></script>
+    <h1 class="title">Rock, Paper, Scissors</h1>
+    <h2 class="message-box">Who ya got?</h2>
+
+    <div class="choices">
+        <button class="choice rock"><img src="images/rock-01.svg" alt="Rock"></button>
+        <button class="choice paper"><img src="images/paper-01.svg" alt="Paper"></button>
+        <button class="choice scissors"><img src="images/scissors-01.svg" alt="Scissors"></button>
+    </div>
+
+    <div class="game">
+        <div class="player box"></div>
+        <div class="score">0-0</div>
+        <div class="computer box"></div>
+    </div>
+
+    <div class="buttons">
+        <button class="play">Play</button>
+        <button class="restart">Restart</button>
+    </div>
+    
+
+    <script src="newScript.js"></script>
 </body>
 </html>

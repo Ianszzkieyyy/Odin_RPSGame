@@ -13,9 +13,9 @@ const userSelection = function() {
 // computer will select randomly between the three 
 const computerSelection = function() {
     const choices = ["ROCK", "PAPER", "SCISSORS"];
-    const randChoice = Math.floor(Math.random() * 3); // Math.random chooses a number from 0 to 1. times that to 3 to make it
-    return choices[randChoice];                       // 0 to 2 (+1 would make it 1 to 3) and floor will round the number off                                                      // 
-}                                                     // and use that number to get element in the array.     
+    const randChoice = Math.floor(Math.random() * 3);       // Math.random chooses a number from 0 to 1. times that to 3 to make it
+    return choices[randChoice];                             // 0 to 2 (+1 would make it 1 to 3) and floor will round the number off                                                      
+}                                                           // and use that number to get element in the array.     
 
 
 // check every scenario possible in rock paper scissor game
