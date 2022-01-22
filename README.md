@@ -9,3 +9,5 @@ UPDATE 2: Continued progress for this one in the afternoon. And I've successfull
 01/20/22 - Started working on creating UI for my Rock Paper Scissor Game. Just got done completing the HTML and CSS code, will add the functionality very soon.
 
 01/21/22 - TO DO: Fix bug of being able to click choice button after playing causing new elements to add and override;
+
+01/22/22 - Completed Final Ui Version of the game. Fixed all bugs. Code can do a little reworking but I think it is good the way it is. Have fun playing (if you even find this one hehe)
