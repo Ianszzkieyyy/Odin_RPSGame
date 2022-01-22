@@ -8,19 +8,21 @@ body {
     font-family: 'Press Start 2P', cursive;
     background-color: black;
     color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: -25px;
 }
 
 .title {
     font-size: 48px;
     text-align: center;
-    margin-top: 75px;
     margin-bottom: 26px;
 }
 
