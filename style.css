@@ -10,6 +10,13 @@ body {
     color: white;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .title {
     font-size: 48px;
     text-align: center;
@@ -27,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 100px;
-    margin: 50px;
+    margin-bottom: 50px;
 }
 
 .choice {
