@@ -53,13 +53,19 @@ body {
 
 .score {
     font-size: 48px;
+    text-align: center;
+}
+
+.condition {
+    font-size: 16px;
+    margin-top: 12px;
 }
 
 .buttons {
     text-align: center;
 }
 
-.play, .restart {
+.play, .restart, .play-again {
     font-family: 'Press Start 2P', cursive;
     font-size: 28px;
     width: 250px;
@@ -74,6 +80,10 @@ body {
 
 button {
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 
 
