@@ -135,7 +135,8 @@ playAgain.addEventListener('click', () => {
 
 const RestartGame = function() {
     document.querySelectorAll('.chosen').forEach(e => e.remove());
-    ToggleButtons();
+    play.classList.toggle('hidden');
+    restart.classList.toggle('hidden');
     play.textContent = 'Play';
     message.textContent = 'Who ya got?';
     userWin = 0;
